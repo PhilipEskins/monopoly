@@ -65,10 +65,6 @@ Firebase Data | No
 * JavaScript
 * Angular
 * Sketch
-* jQuery 3.3.1
-* Babel
-* Webpack
-* ESLint
 
 ## Support and contact details
 
