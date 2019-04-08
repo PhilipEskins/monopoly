@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CommunityCardsComponent } from './community-cards/community-cards.component';
+import { ChanceCardsComponent } from './chance-cards/chance-cards.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CommunityCardsComponent
+    CommunityCardsComponent,
+    ChanceCardsComponent
   ],
   imports: [
     BrowserModule
