@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="200px" viewBox="0 0 120 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>mediterranean ave</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="brown-tiles" transform="translate(-236.000000, -42.000000)">
+            <g id="mediterranean-ave" transform="translate(236.000000, 42.000000)">
+                <g id="tile">
+                    <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="200"></rect>
+                    <rect id="Rectangle" fill="#C7EAC0" x="5" y="5" width="110" height="190"></rect>
+                </g>
+                <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="60"></rect>
+                <text id="MEDITERRANEAN-AVENUE" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="29.6669922" y="81">MEDITERR</tspan>
+                    <tspan x="40.328125" y="95">ANEAN </tspan>
+                    <tspan x="36.7685547" y="109">AVENUE</tspan>
+                </text>
+                <text id="60" font-family="Helvetica" font-size="22" font-weight="normal" fill="#000000">
+                    <tspan x="48.2646484" y="188">60</tspan>
+                </text>
+                <rect id="Rectangle" fill="#613E0D" x="5" y="5" width="110" height="50"></rect>
+                <path d="M33.0454545,180.113636 L33.0454545,175 L35.0909091,175 L35.0909091,175.258191 L38.5655869,178.732868 L41.9090909,175.389364 L41.9090909,175 L43.9545455,175 L43.9545455,180.113636 L46,180.113636 L46,182.159091 L43.9545455,182.159091 L43.9545455,187.272727 L41.9090909,187.272727 L41.9090909,182.159091 L35.0909091,182.159091 L35.0909091,187.272727 L33.0454545,187.272727 L33.0454545,182.159091 L31,182.159091 L31,180.113636 L33.0454545,180.113636 Z M35.0909091,180.113636 L37.0536452,180.113636 L35.0909091,178.1509 L35.0909091,180.113636 Z M40.0775285,180.113636 L41.9090909,180.113636 L41.9090909,178.282074 L40.0775285,180.113636 Z" id="Combined-Shape" fill="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
