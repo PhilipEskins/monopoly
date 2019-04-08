@@ -1,4 +1,4 @@
-import { CommunityCard } from './cards.model';
+import { CommunityCard } from './community-cards.model';
 
 export const COMMUNITY: CommunityCard[] = [
   new CommunityCard("GO", 200, "ADVANCE TO GO (COLLECT $200)"),

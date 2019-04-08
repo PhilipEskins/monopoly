@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { CommunityCardsService } from '../community-cards.service';
 
 @Component({
   selector: 'app-community-cards',
   templateUrl: './community-cards.component.html',
-  styleUrls: ['./community-cards.component.css']
+  styleUrls: ['./community-cards.component.css'],
+  providers: [CommunityCardsService]
 })
-export class CommunityCardsComponent implements OnInit {
+export class CommunityCardsComponent {
+  // communityCards: CommunityCard[];
 
-  constructor() { }
+  constructor(private communityCards: CommunityCardsService) { }
 
   ngOnInit() {
   }
