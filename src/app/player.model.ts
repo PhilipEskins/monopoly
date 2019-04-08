@@ -3,3 +3,4 @@ export class Player {
   public location: number = 0;
   public propertiesOwned: number[];
     constructor (public name: string, public ifActive: boolean, public playerPiece: string) { }
+  }

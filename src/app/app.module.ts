@@ -13,7 +13,7 @@ import { BoardComponent } from './board/board.component';
   declarations: [
     AppComponent,
     CommunityCardsComponent,
-    ChanceCardsComponent
+    ChanceCardsComponent,
     PlayerComponent,
     SetupComponent,
     BoardComponent
