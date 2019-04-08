@@ -43,8 +43,8 @@ Create Chance Cards Data | Yes
 Random Community Cards | Yes
 Random Chance Cards | Yes
 Create Property Data | Yes
-Monopoly Board | No
-Monopoly Pieces | No
+Monopoly Board | Yes
+Monopoly Pieces | Yes
 
 
 ## STRETCH GOALS
@@ -72,7 +72,7 @@ If there are any _questions_ or would like to contribute to the code, please fee
 
 _[Philip Eskins](mailto:)_
 
-_[Nayomi Morita](mailto:)_
+_[Nayomi Morita](mailto:nayomi.morita@gmail.com)_
 
 _[Drew Yox](mailto:)_
 
