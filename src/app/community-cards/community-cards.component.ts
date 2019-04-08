@@ -8,6 +8,7 @@ import { CommunityCardsService } from '../community-cards.service';
   styleUrls: ['./community-cards.component.scss'],
   providers: [CommunityCardsService]
 })
+
 export class CommunityCardsComponent implements OnInit {
   communityCards: CommunityCard[];
   randomCard;

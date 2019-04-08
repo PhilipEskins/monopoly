@@ -7,7 +7,7 @@ export class ChanceCardsService {
 
   constructor() { }
 
-  getCommunityCards() {
+  getChanceCards() {
     return CHANCE;
   }
 
