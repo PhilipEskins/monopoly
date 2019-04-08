@@ -45,6 +45,7 @@ Random Chance Cards | Yes
 Create Property Data | Yes
 Monopoly Board | Yes
 Monopoly Pieces | Yes
+Monopoly Board Setup | No
 
 
 ## STRETCH GOALS
