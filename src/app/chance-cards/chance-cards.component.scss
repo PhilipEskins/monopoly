@@ -1,0 +1,18 @@
+#randomCard {
+  text-align: center;
+  width: 400px;
+  height: 200px;
+  background-color: orange;
+  border: 1px solid black;
+  div {
+   display: flex;
+   flex-flow: row nowrap;
+  }
+}
+  #card {
+    color: black
+}
+button {
+  border-radius: 5px;
+  border: 1px solid black;
+}
