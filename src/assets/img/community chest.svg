@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="200px" viewBox="0 0 120 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>community chest</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="chest" transform="translate(-84.000000, -22.000000)">
+            <g id="community-chest" transform="translate(84.000000, 22.000000)">
+                <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="200"></rect>
+                <rect id="Rectangle" fill="#C7EAC0" x="5" y="5" width="110" height="190"></rect>
+                <text id="COMMUNITY-CHEST" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="23.609375" y="27">COMMUNITY </tspan>
+                    <tspan x="40.1650391" y="41">CHEST</tspan>
+                </text>
+                <g id="chest" transform="translate(19.000000, 89.000000)">
+                    <path d="M83,18.1978022 L83,69 L0,69 L0,18.1978022 C4.12562937e-15,8.14743356 18.5801829,0 41.5,0 C64.4198171,0 83,8.14743356 83,18.1978022 Z" id="Combined-Shape" fill="#27ADE5"></path>
+                    <rect id="Rectangle" fill="#FFFFFF" x="6" y="22" width="72" height="41"></rect>
+                    <path d="M40.1094757,22.7810486 C38.3047379,22.1952621 37,20.5 37,18.5 C37,16.0147186 39.0147186,14 41.5,14 C43.9852814,14 46,16.0147186 46,18.5 C46,20.5 44.6952621,22.1952621 42.8905243,22.7810486 L46,29 L37,29 L40.1094757,22.7810486 Z" id="Combined-Shape" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

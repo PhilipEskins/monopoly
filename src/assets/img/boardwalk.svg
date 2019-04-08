@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="200px" viewBox="0 0 120 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>boardwalk</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blue-tiles" transform="translate(-206.000000, -33.000000)">
+            <g id="boardwalk" transform="translate(206.000000, 33.000000)">
+                <g id="tile">
+                    <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="200"></rect>
+                    <rect id="Rectangle" fill="#C7EAC0" x="5" y="5" width="110" height="190"></rect>
+                </g>
+                <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="60"></rect>
+                <rect id="Rectangle" fill="#2142CE" x="5" y="5" width="110" height="50"></rect>
+                <text id="BOARDWALK" font-family="Helvetica" font-size="12" font-weight="normal" fill="#000000">
+                    <tspan x="21.8789062" y="84">BOARDWALK</tspan>
+                </text>
+                <text id="400" font-family="Helvetica" font-size="22" font-weight="normal" fill="#000000">
+                    <tspan x="42.1469727" y="187">400</tspan>
+                </text>
+                <path d="M27.0454545,179.113636 L27.0454545,174 L29.0909091,174 L29.0909091,174.258191 L32.5655869,177.732868 L35.9090909,174.389364 L35.9090909,174 L37.9545455,174 L37.9545455,179.113636 L40,179.113636 L40,181.159091 L37.9545455,181.159091 L37.9545455,186.272727 L35.9090909,186.272727 L35.9090909,181.159091 L29.0909091,181.159091 L29.0909091,186.272727 L27.0454545,186.272727 L27.0454545,181.159091 L25,181.159091 L25,179.113636 L27.0454545,179.113636 Z M29.0909091,179.113636 L31.0536452,179.113636 L29.0909091,177.1509 L29.0909091,179.113636 Z M34.0775285,179.113636 L35.9090909,179.113636 L35.9090909,177.282074 L34.0775285,179.113636 Z" id="Combined-Shape" fill="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
