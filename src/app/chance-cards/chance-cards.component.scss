@@ -3,7 +3,7 @@
   width: 400px;
   height: 200px;
   background-color: orange;
-  border: 1px solid black;
+  border: 2px solid black;
   padding: 5px;
   #randomCard {
     display: flex;
@@ -24,24 +24,3 @@
     }
   }
 }
-
-
-
-
-
-
-//   div {
-//     display: flex;
-//     flex-flow: row nowrap;
-//     width: 100%;
-//     #image {
-      // width: 30%;
-
-//     }
-//     #card {
-//       justify-content: center;
-//       color: black;
-//       height: 100px;
-//     }
-//   }
-// }

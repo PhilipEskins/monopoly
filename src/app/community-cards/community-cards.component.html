@@ -1,13 +1,15 @@
-
-<div id="communityContainer">
-
-<div id="randomCard">
-  <h2>Community Chest</h2>
-  <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
-  <div id="card">
-    {{randomCommunityCard}}
+<div (click)="communityCardGenerator()" id="communityContainer">
+  <div *ngIf="randomCommunityCard == null" id="randomCard">
+    <div id="communityCardContent">
+      <h1>Community Chest</h1>
+    </div>
+    <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
   </div>
-</div>
-<button (click)="communityCardGenerator()">Community Card</button>
-
+  <div *ngIf="randomCommunityCard != null" id="randomCard">
+    <div id="communityCardContent">
+      <h1>Community Chest</h1>
+      <p>{{randomCommunityCard}}</p>
+    </div>
+    <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
+  </div>
 </div>
