@@ -5,7 +5,7 @@ import { CommunityCardsService } from '../community-cards.service';
 @Component({
   selector: 'app-community-cards',
   templateUrl: './community-cards.component.html',
-  styleUrls: ['./community-cards.component.css'],
+  styleUrls: ['./community-cards.component.scss'],
   providers: [CommunityCardsService]
 })
 export class CommunityCardsComponent implements OnInit {
@@ -22,7 +22,6 @@ export class CommunityCardsComponent implements OnInit {
   communityCardGenerator() {
     let card = Math.floor(Math.random() * this.communityCards.length);
     this.randomCard = this.communityCards[card];
-    // console.log(this.communityCards[card]);
   }
 
 }
