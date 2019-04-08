@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="200px" viewBox="0 0 120 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>luxury tax</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="taxes" transform="translate(-169.000000, -23.000000)">
+            <g id="luxury-tax" transform="translate(169.000000, 23.000000)">
+                <rect id="Rectangle" fill="#000000" x="0" y="0" width="120" height="200"></rect>
+                <rect id="Rectangle" fill="#C7EAC0" x="5" y="5" width="110" height="190"></rect>
+                <text id="LUXURY-TAX" font-family="Helvetica" font-size="18" font-weight="normal" fill="#000000">
+                    <tspan x="24.3066406" y="33">LUXURY </tspan>
+                    <tspan x="43.6601562" y="55">TAX</tspan>
+                </text>
+                <text id="100" font-family="Helvetica" font-size="22" font-weight="normal" fill="#000000">
+                    <tspan x="71.1469727" y="188">100</tspan>
+                </text>
+                <text id="PAY" font-family="Helvetica" font-size="20" font-weight="normal" fill="#000000">
+                    <tspan x="13.9648438" y="188">PAY</tspan>
+                </text>
+                <path d="M57.0454545,181.113636 L57.0454545,176 L59.0909091,176 L59.0909091,176.258191 L62.5655869,179.732868 L65.9090909,176.389364 L65.9090909,176 L67.9545455,176 L67.9545455,181.113636 L70,181.113636 L70,183.159091 L67.9545455,183.159091 L67.9545455,188.272727 L65.9090909,188.272727 L65.9090909,183.159091 L59.0909091,183.159091 L59.0909091,188.272727 L57.0454545,188.272727 L57.0454545,183.159091 L55,183.159091 L55,181.113636 L57.0454545,181.113636 Z M59.0909091,181.113636 L61.0536452,181.113636 L59.0909091,179.1509 L59.0909091,181.113636 Z M64.0775285,181.113636 L65.9090909,181.113636 L65.9090909,179.282074 L64.0775285,181.113636 Z" id="Combined-Shape" fill="#000000"></path>
+                <g id="ring" transform="translate(18.000000, 79.000000)">
+                    <path d="M42,59 C18.8040405,59 0,50.9411255 0,41 C0,31.0588745 18.8040405,23 42,23 C65.1959595,23 84,31.0588745 84,41 C84,50.9411255 65.1959595,59 42,59 Z M42.3443295,51.3404255 C57.6437921,51.3404255 70.0464572,46.8823247 70.0464572,41.3829787 C70.0464572,35.8836327 57.6437921,31.4255319 42.3443295,31.4255319 C27.0448669,31.4255319 14.6422018,35.8836327 14.6422018,41.3829787 C14.6422018,46.8823247 27.0448669,51.3404255 42.3443295,51.3404255 Z" id="Combined-Shape" fill="#FCFF00"></path>
+                    <path d="M28,7.76342464 L35.8580421,-2.22044605e-16 L47.8880036,0 L56,8.01432107 L42.0831919,29 L28,7.76342464 Z" id="Combined-Shape" fill="#000000"></path>
+                    <path d="M31.5486317,8.75231329 L37.668733,3 L46.7585904,3 L53,8.80347388 L42.29234,24 L31.5486317,8.75231329 Z M31.0512799,8.52631579 L31,8.52631579 L31,8.47811759 L31.0512799,8.52631579 Z" id="Combined-Shape" fill="#B8FEFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
