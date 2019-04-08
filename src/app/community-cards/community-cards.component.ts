@@ -10,6 +10,7 @@ import { CommunityCardsService } from '../community-cards.service';
 })
 export class CommunityCardsComponent implements OnInit {
   communityCards: CommunityCard[];
+  randomCard;
 
 
   constructor(private communityCardsService: CommunityCardsService) {}
@@ -20,7 +21,8 @@ export class CommunityCardsComponent implements OnInit {
 
   communityCardGenerator() {
     let card = Math.floor(Math.random() * this.communityCards.length);
-    console.log(this.communityCards[card]);
+    this.randomCard = this.communityCards[card];
+    // console.log(this.communityCards[card]);
   }
 
 }
