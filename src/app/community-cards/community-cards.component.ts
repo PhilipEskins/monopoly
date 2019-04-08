@@ -10,7 +10,8 @@ import { CommunityCardsService } from '../community-cards.service';
 export class CommunityCardsComponent {
   // communityCards: CommunityCard[];
 
-  constructor(private communityCards: CommunityCardsService) { }
+  constructor(private communityCardsService: CommunityCardsService) {
+  console.log(communityCardsService)}
 
   ngOnInit() {
   }
