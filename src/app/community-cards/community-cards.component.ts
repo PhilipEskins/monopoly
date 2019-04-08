@@ -18,4 +18,9 @@ export class CommunityCardsComponent implements OnInit {
     this.communityCards = this.communityCardsService.getCommunityCards();
   }
 
+  communityCardGenerator() {
+    let card = Math.floor(Math.random() * this.communityCards.length);
+    console.log(this.communityCards[card]);
+  }
+
 }
