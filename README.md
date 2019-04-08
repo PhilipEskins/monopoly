@@ -5,7 +5,7 @@
 Monopoly was built by 4 junior web developers during Javascript Group Week at Epicodus. The application is based on Object Oriented programming with Angular and the board remake was built from Sketch.
 
 
-#### By Philip Eskins, Nayomi Morita, Drew Yox, Maly Phongsavanh
+#### By Philip Eskins, Nayomi Morita, Drew Yoxsimer, Maly Phongsavanh
 
 
 ## Setup on OSX
@@ -71,11 +71,11 @@ Firebase Data | No
 
 If there are any _questions_ or would like to contribute to the code, please feel free to email:
 
-_[Philip Eskins](mailto:)_
+_[Philip Eskins](mailto:philipeskins@gmail.com)_
 
 _[Nayomi Morita](mailto:nayomi.morita@gmail.com)_
 
-_[Drew Yox](mailto:)_
+_[Drew Yoxsimer](mailto:drewyox@gmail.com)_
 
 _[Maly Phongsavanh](mailto:phongsavanh619@icloud.com)_
 
@@ -83,4 +83,4 @@ _[Maly Phongsavanh](mailto:phongsavanh619@icloud.com)_
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2019 **Philip Eskins, Nayomi Morita, Drew Yox, Maly Phongsavanh**
+Copyright (c) 2019 **Philip Eskins, Nayomi Morita, Drew Yoxsimer, Maly Phongsavanh**
