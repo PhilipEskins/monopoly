@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120px" height="86px" viewBox="0 0 120 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>shoe</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pieces" transform="translate(-460.000000, -83.000000)" fill="#7D7D7D">
+            <path d="M550.5,169 L550.5,155.5 C542.069018,160.368399 535.195454,163.582684 529.87931,165.142857 C524.563166,166.70303 516.103396,167.988744 504.5,169 L460,169 C460,140.502107 481.207564,117.4 507.368421,117.4 L507.368446,117.4 L526.315789,117.4 L526.315789,115.442575 C528.155567,110.720184 529.473684,97.9779759 529.473684,83 L580,83 L580,117.4 L580,169 L554.736842,169 L550.5,169 Z" id="shoe"></path>
+        </g>
+    </g>
+</svg>
