@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="149px" height="138px" viewBox="0 0 149 138" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>hotel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pieces" transform="translate(-276.000000, -201.000000)">
+            <g id="hotel" transform="translate(276.000000, 201.000000)">
+                <rect id="Rectangle" fill="#FF0000" x="0" y="14" width="149" height="124"></rect>
+                <rect id="Rectangle" fill="#900000" x="0" y="76" width="149" height="62"></rect>
+                <path d="M89.908452,29 C89.0793782,33.4999505 82.7209228,37 75,37 C67.2790772,37 60.9206218,33.4999505 60.091548,29 L60,29 L60,8 L90,8 L90,29 L89.908452,29 Z" id="Combined-Shape" fill="#900000"></path>
+                <ellipse id="Oval" fill="#FF0000" cx="75" cy="8" rx="15" ry="8"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
