@@ -21,7 +21,7 @@ export class ChanceCardsComponent implements OnInit {
 
   chanceCardGenerator() {
     let card = Math.floor(Math.random() * this.chanceCards.length);
-    this.randomChanceCard = this.chanceCards[card];
+    this.randomChanceCard = this.chanceCards[card].description;
   }
 
 }
