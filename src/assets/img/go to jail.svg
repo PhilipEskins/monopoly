@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>go to jail</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-311.000000, -49.000000)">
+            <g id="go-to-jail" transform="translate(311.000000, 49.000000)">
+                <rect id="Rectangle" fill="#000000" x="0" y="0" width="200" height="200"></rect>
+                <rect id="Rectangle" fill="#C7EAC0" x="5" y="5" width="190" height="190"></rect>
+                <text id="JAIL" transform="translate(165.445436, 36.445436) rotate(-135.000000) translate(-165.445436, -36.445436) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
+                    <tspan x="148.437136" y="42.4454365">JAIL</tspan>
+                </text>
+                <text id="GO-TO" transform="translate(50.516504, 156.516504) rotate(-135.000000) translate(-50.516504, -156.516504) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
+                    <tspan x="23.4269047" y="162.516504">GO TO</tspan>
+                </text>
+                <path d="M157.610173,36.6126768 L157.610173,100.571338 L157.51849,100.571338 L157.518488,100.571362 C155.940723,127.785874 134.159837,150.502996 104.610173,158.192442 L104.610173,158.610173 C74.9094363,150.881415 53.057116,127.970929 51.6792445,100.571338 L51.6101731,100.571338 L51.6101731,36.8969696 L78.0936688,63.3804653 L104.863961,36.6101731 L106.054984,36.6101731 L131.833784,63.3804653 L157.610173,36.6126768 Z" id="Combined-Shape" fill="#F2FF00" transform="translate(104.610173, 97.610173) rotate(-135.000000) translate(-104.610173, -97.610173) "></path>
+            </g>
+        </g>
+    </g>
+</svg>
