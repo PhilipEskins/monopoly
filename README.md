@@ -74,13 +74,13 @@ Firebase Data | No
 
 If there are any _questions_ or would like to contribute to the code, please feel free to email:
 
-_[Maly Phongsavanh](mailto:phongsavanh619@icloud.com)_
+_[Philip Eskins](mailto:)_
 
 _[Nayomi Morita](mailto:)_
 
-_[Philip Eskins](mailto:)_
-
 _[Drew Yox](mailto:)_
+
+_[Maly Phongsavanh](mailto:phongsavanh619@icloud.com)_
 
 ## License
 
