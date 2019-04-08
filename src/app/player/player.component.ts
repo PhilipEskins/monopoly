@@ -19,7 +19,7 @@ export class PlayerComponent implements OnInit {
 
   constructor(private diceService: DiceService) { }
   players: Player =
-    new Player("Mr.Monopoly", true);
+    new Player("Mr.Monopoly", true, "");
 
 
   ngOnInit() {
@@ -48,7 +48,8 @@ export class PlayerComponent implements OnInit {
     this.playerMove = this.roll1 + this.roll2;
     this.players.location = this.playerMove + this.players.location;
     if ( this.players.location >= 40 ) {
-      this.players.location = this.players.location - 40;
+      this.players.location -= 40;
+      this.players.money += 200;
     }
     console.log(this.players.location);
   }
