@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="134px" height="92px" viewBox="0 0 134 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>dog</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pieces" transform="translate(-611.000000, -77.000000)" fill="#000000">
+            <path d="M640.251928,154 L629,162.409745 L629,169 L611,169 L611,154 L611,109.641304 L611.472054,109.641304 L625.576036,84.8834767 L626.579619,109.641304 L678.42214,109.641304 L707.994106,92.0652174 L708.150087,92.3433386 L709.196106,91.2282609 L708.562186,91.2282609 L717.098878,77 L725.533135,91.0575318 L741.725543,107.154766 L735.063709,114.256416 L745,126.446688 L721.956101,146.352143 L707.225553,128.28007 L702.871059,130.868162 L702.871059,142 L703,142 L703,169 L685,169 L685,154 L640.251928,154 Z" id="dog"></path>
+        </g>
+    </g>
+</svg>
