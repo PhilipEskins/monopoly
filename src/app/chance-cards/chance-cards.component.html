@@ -1,3 +1,11 @@
-<div *ngFor="let chance of chanceCards">
-  <p>{{chance.description}}</p>
+<div id="chanceContainer">
+
+  <div id="randomCard">
+    <h2>Chance Chest</h2>
+    <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
+    <div id="card">
+      {{randomChanceCard.description}}
+    </div>
+  </div>
+  <button (click)="chanceCardGenerator()">Chance Card</button>
 </div>
