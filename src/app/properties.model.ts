@@ -1,5 +1,5 @@
 export class Property {
-  public owner: string = null;
+  public owner: boolean = null;
 
   constructor(
     public location: number,

@@ -14,7 +14,12 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 export class BoardComponent implements OnInit {
 
+
   players: FirebaseListObservable<any[]>;
+
+  prop: Property[];
+
+
 
   constructor(private databaseService: DatabaseService) { }
 

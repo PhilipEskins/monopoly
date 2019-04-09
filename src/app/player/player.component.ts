@@ -31,6 +31,7 @@ export class PlayerComponent implements OnInit {
   constructor(private diceService: DiceService, private propertyService: PropertyService, private databaseService: DatabaseService) {
   }
 
+
   ngOnInit() {
     this.players = this.databaseService.getPlayers();
     this.prop = this.propertyService.getProperties();
@@ -52,10 +53,13 @@ export class PlayerComponent implements OnInit {
     this.removeClass();
     this.roll1 = this.diceService.diceRoll();
     this.roll2 = this.diceService.diceRoll();
+    this.taxes();
     this.doubleCheck();
     this.movement();
     console.log(this.location)
+
   }
+
 
   doubleCheck() {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
@@ -87,7 +91,6 @@ export class PlayerComponent implements OnInit {
         this.location=40;
       }
     }
-    console.log(this.location);
   }
 
   taxes() {
@@ -99,8 +102,8 @@ export class PlayerComponent implements OnInit {
   }
 
   buyingProperty() {
-    console.log(this.location);
-    if(this.location===2 || this.location===7 || this.location===10 || this.location===17 || this.location===22 || this.location===33 || this.location===36){
+    if(this.location===2 || this.location===4 || this.location===7 || this.location===10 || this.location===17 || this.location===22 || this.location===33 || this.location===36 || this.location===38){
+
       alert("cant buy fool")
     } else {
       if (this.prop[this.location].owner!==null){
@@ -108,7 +111,12 @@ export class PlayerComponent implements OnInit {
       } else if (this.money<this.prop[this.location].price){
         alert("not enough funds");
       } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
-        alert("you can buy this prop");
+        if (confirm("Are you sure you want to buy this?")){
+          (this.propertiesOwned).push(this.prop[this.location].location);
+          this.prop[this.location].owner = true;
+          this.money -= this.prop[this.location].price;
+        }
+
       }
     }
   }
