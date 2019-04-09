@@ -3,15 +3,17 @@ import { DiceService } from '../dice.service';
 import { Player } from '../player.model';
 import { PropertyService } from '../property.service';
 import { Property } from '../properties.model';
+import { PlayerService } from './player.service';
 
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css'],
-  providers: [DiceService, PropertyService]
+  providers: [DiceService, PropertyService, PlayerService]
 })
 export class PlayerComponent implements OnInit {
   prop: Property[];
+  player: Player[];
 
 
   roll1: number;
@@ -19,14 +21,14 @@ export class PlayerComponent implements OnInit {
   doubleCount: number = 0;
   playerMove: number;
 
-  constructor(private diceService: DiceService, private propertyService: PropertyService) { }
-  players: Player =
-  new Player("Mr.Monopoly", true, "");
+  constructor(private diceService: DiceService, private propertyService: PropertyService, private playersService: PlayerService) { }
+
 
 
 
   ngOnInit() {
     this.prop = this.propertyService.getProperties();
+    this.player = this.PlayerService.getPlayers();
   }
 
   playerDiceRoll() {
