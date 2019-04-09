@@ -77,6 +77,7 @@ export class PlayerComponent implements OnInit {
   }
 
   buyingProperty() {
+    console.log(this.players.location);
     if(this.players.location===2 || this.players.location===7 || this.players.location===10 || this.players.location===17 || this.players.location===22 || this.players.location===33 || this.players.location===36){
       alert("cant buy fool")
     } else {

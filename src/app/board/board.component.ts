@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player.model';
 import { DiceService} from '../dice.service';
+import { PropertyService } from '../property.service';
+import { Property } from '../properties.model';
 
 
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss'],
-  providers: [DiceService]
+  providers: [DiceService, PropertyService]
 })
 export class BoardComponent implements OnInit {
   roll1: number;
@@ -15,12 +17,14 @@ export class BoardComponent implements OnInit {
   doubleCount: number = 0;
   playerMove: number;
 
+  prop: Property[];
   players: Player = new Player("Monopoly", true, "car");
 
-  constructor(private diceService: DiceService) { }
+  constructor(private diceService: DiceService, private propertyService: PropertyService) { }
 
   ngOnInit() {
     this.movement();
+    this.prop = this.propertyService.getProperties();
   }
 
   playerDiceRoll() {
@@ -45,11 +49,47 @@ export class BoardComponent implements OnInit {
   }
 
   movePlayer() {
-    this.playerMove = this.roll1 + this.roll2;
-    this.players.location = this.playerMove + this.players.location;
-    if ( this.players.location >= 39 ) {
-      this.players.location -= 39;
-      this.players.money += 200;
+    this.taxes();
+    console.log(this.players.money + "first")
+    if (this.players.location===40){
+      if (this.roll1===this.roll2) {
+        this.players.location=10;
+      } else if (this.roll1!==this.roll2){
+        this.players.location=40;
+      }
+    } else if (this.players.location <= 39){
+      this.playerMove = this.roll1 + this.roll2;
+      this.players.location = this.playerMove + this.players.location;
+      if ( this.players.location >= 39 ) {
+        this.players.location -= 39;
+        this.players.money += 200;
+      } else if (this.players.location===30 ){
+        this.players.location=40;
+      }
+    }
+    console.log(this.players.location);
+  }
+
+  taxes() {
+    if(this.players.location===4){
+      this.players.money -= 200;
+    } else if(this.players.location===38){
+      this.players.money -= 100;
+    }
+  }
+
+  buyingProperty() {
+    console.log(this.players.location);
+    if(this.players.location===2 || this.players.location===7 || this.players.location===10 || this.players.location===17 || this.players.location===22 || this.players.location===33 || this.players.location===36){
+      alert("cant buy fool")
+    } else {
+      if (this.prop[this.players.location].owner!==null){
+        alert("pay rent");
+      } else if (this.players.money<this.prop[this.players.location].price){
+        alert("not enough funds");
+      } else if (this.prop[this.players.location].owner == null && this.players.money>=this.prop[this.players.location].price){
+        alert("you can buy this prop");
+      }
     }
   }
 
@@ -57,9 +97,7 @@ export class BoardComponent implements OnInit {
     const car = document.getElementById("car");
     const currentLocation = this.players.location;
     const numToString = "b" + currentLocation.toString();
-
     car.classList.add(`${numToString}`);
-
     console.log(numToString);
   }
 
