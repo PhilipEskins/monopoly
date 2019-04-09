@@ -11,6 +11,7 @@ import { Property } from '../properties.model';
   providers: [DiceService, PropertyService]
 })
 export class PlayerComponent implements OnInit {
+  prop: Property[];
 
 
   roll1: number;
@@ -20,9 +21,8 @@ export class PlayerComponent implements OnInit {
 
   constructor(private diceService: DiceService, private propertyService: PropertyService) { }
   players: Player =
-    new Player("Mr.Monopoly", true, "");
+  new Player("Mr.Monopoly", true, "");
 
-    prop: Property[];
 
 
   ngOnInit() {
@@ -32,7 +32,6 @@ export class PlayerComponent implements OnInit {
   playerDiceRoll() {
     this.roll1 = this.diceService.diceRoll();
     this.roll2 = this.diceService.diceRoll();
-    console.log(this.roll1, this.roll2)
     this.doubleCheck();
   }
 
@@ -40,15 +39,16 @@ export class PlayerComponent implements OnInit {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
     if (doubleOcc === true) {
       this.doubleCount++;
-      console.log("Roll again " + this.doubleCount);
     } else {
       this.doubleCount = 0;
-      console.log("End of turn");
     }
     this.movePlayer();
   }
 
   movePlayer() {
+
+    this.taxes();
+    console.log(this.players.money + "first")
     if (this.players.location===40){
       if (this.roll1===this.roll2) {
         this.players.location=10;
@@ -68,19 +68,25 @@ export class PlayerComponent implements OnInit {
     console.log(this.players.location);
   }
 
-buyingProperty() {
-
-  if ( this.prop[this.players.location].owner==null && this.players.money>=this.prop[this.players.location].price){
-    console.log(this.prop);
-    alert("you can buy this prop")
-  } else if (this.players.location!==this.prop[this.players.location].location){
-    alert("game is broken")
-  } else if (this.prop[this.players.location].owner!==null){
-    alert("pay rent")
-  } else if (this.players.money<this.prop[this.players.location].price){
-    alert("not enough funds")
+  taxes() {
+    if(this.players.location===4){
+      this.players.money -= 200;
+    } else if(this.players.location===38){
+      this.players.money -= 100;
+    }
   }
-}
 
-
+  buyingProperty() {
+    if(this.players.location===2 || this.players.location===7 || this.players.location===10 || this.players.location===17 || this.players.location===22 || this.players.location===33 || this.players.location===36){
+      alert("cant buy fool")
+    } else {
+      if (this.prop[this.players.location].owner!==null){
+        alert("pay rent");
+      } else if (this.players.money<this.prop[this.players.location].price){
+        alert("not enough funds");
+      } else if (this.prop[this.players.location].owner == null && this.players.money>=this.prop[this.players.location].price){
+        alert("you can buy this prop");
+      }
+    }
+  }
 }
