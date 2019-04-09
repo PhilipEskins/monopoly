@@ -59,7 +59,7 @@ Homes & Hotels | No
 Multiplayer | No
 Free Parking | No
 $200 Pass GO | No
-Jail | No
+Jail | Yes
 Firebase Data | No
 
 
