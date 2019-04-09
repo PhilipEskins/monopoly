@@ -49,9 +49,6 @@ export class PlayerComponent implements OnInit {
   }
 
   movePlayer() {
-
-
-    console.log(this.players.money + "first")
     if (this.players.location===40){
       if (this.roll1===this.roll2) {
         this.players.location=10;
@@ -68,7 +65,6 @@ export class PlayerComponent implements OnInit {
         this.players.location=40;
       }
     }
-    console.log(this.players.location);
   }
 
   taxes() {
@@ -80,7 +76,6 @@ export class PlayerComponent implements OnInit {
   }
 
   buyingProperty() {
-    console.log(this.players.location);
     if(this.players.location===2 || this.players.location===4 || this.players.location===7 || this.players.location===10 || this.players.location===17 || this.players.location===22 || this.players.location===33 || this.players.location===36 || this.players.location===38){
       alert("cant buy fool")
     } else {
