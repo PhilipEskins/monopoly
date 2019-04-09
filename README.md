@@ -46,6 +46,8 @@ Create Property Data | Yes
 Monopoly Board | Yes
 Monopoly Pieces | Yes
 Monopoly Board Setup | No
+Buy Properties | No
+Peice Movement | No
 
 
 ## STRETCH GOALS
