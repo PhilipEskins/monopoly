@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DiceService } from '../dice.service';
 import { Player } from '../player.model';
 import { PropertyService } from '../property.service';
