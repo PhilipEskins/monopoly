@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { DiceService } from '../dice.service';
 import { Player } from '../player.model';
+import { PropertyService } from '../property.service';
+import { Property } from '../properties.model';
 
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
   styleUrls: ['./player.component.css'],
-  providers: [DiceService]
+  providers: [DiceService, PropertyService]
 })
 export class PlayerComponent implements OnInit {
-
 
 
   roll1: number;
@@ -17,12 +18,15 @@ export class PlayerComponent implements OnInit {
   doubleCount: number = 0;
   playerMove: number;
 
-  constructor(private diceService: DiceService) { }
+  constructor(private diceService: DiceService, private propertyService: PropertyService) { }
   players: Player =
     new Player("Mr.Monopoly", true, "");
 
+    prop: Property[];
+
 
   ngOnInit() {
+    this.prop = this.propertyService.getProperties();
   }
 
   playerDiceRoll() {
@@ -63,5 +67,20 @@ export class PlayerComponent implements OnInit {
     }
     console.log(this.players.location);
   }
+
+buyingProperty() {
+
+  if ( this.prop[this.players.location].owner==null && this.players.money>=this.prop[this.players.location].price){
+    console.log(this.prop);
+    alert("you can buy this prop")
+  } else if (this.players.location!==this.prop[this.players.location].location){
+    alert("game is broken")
+  } else if (this.prop[this.players.location].owner!==null){
+    alert("pay rent")
+  } else if (this.players.money<this.prop[this.players.location].price){
+    alert("not enough funds")
+  }
+}
+
 
 }
