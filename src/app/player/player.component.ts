@@ -32,13 +32,11 @@ export class PlayerComponent implements OnInit {
   playerDiceRoll() {
     this.roll1 = this.diceService.diceRoll();
     this.roll2 = this.diceService.diceRoll();
+    this.taxes();
     this.doubleCheck();
 
   }
 
-  consolelogging() {
-    console.log("hey" + this.players.propertiesOwned, this.prop[this.players.location].owner);
-  }
 
   doubleCheck() {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
@@ -52,7 +50,7 @@ export class PlayerComponent implements OnInit {
 
   movePlayer() {
 
-    this.taxes();
+
     console.log(this.players.money + "first")
     if (this.players.location===40){
       if (this.roll1===this.roll2) {
@@ -93,7 +91,8 @@ export class PlayerComponent implements OnInit {
       } else if (this.prop[this.players.location].owner == null && this.players.money>=this.prop[this.players.location].price){
         if (confirm("Are you sure you want to buy this?")){
           (this.players.propertiesOwned).push(this.prop[this.players.location].location);
-          return this.prop[this.players.location].owner = true;
+          this.prop[this.players.location].owner = true;
+          this.players.money -= this.prop[this.players.location].price;
         }
       }
     }

@@ -18,7 +18,7 @@ export class BoardComponent implements OnInit {
   playerMove: number;
 
   prop: Property[];
-  players: Player = new Player("Monopoly", true, "car");
+  players: Player = new Player([], "Monopoly", true, "car");
 
   constructor(private diceService: DiceService, private propertyService: PropertyService) { }
 
