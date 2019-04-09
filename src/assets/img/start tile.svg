@@ -12,9 +12,11 @@
                 <text id="COLLECT" transform="translate(47.729708, 47.729708) rotate(-45.000000) translate(-47.729708, -47.729708) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
                     <tspan x="8.52511789" y="53.7297077">COLLECT</tspan>
                 </text>
-                <text id="200-SALARY-AS-YOU-PA" transform="translate(82.589358, 81.589358) rotate(-45.000000) translate(-82.589358, -81.589358) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
-                    <tspan x="25.716555" y="58.0893578">   200 SALARY </tspan>
-                    <tspan x="26.2063011" y="78.0893578">AS YOU PASS</tspan>
+                <text id="200-SALARY" transform="translate(68.840620, 52.840620) rotate(-45.000000) translate(-68.840620, -52.840620) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
+                    <tspan x="16.8406204" y="58.8406204">200 SALARY </tspan>
+                </text>
+                <text id="AS-YOU-PASS" transform="translate(76.497475, 77.497475) rotate(-45.000000) translate(-76.497475, -77.497475) " font-family="Helvetica" font-size="17" font-weight="normal" fill="#000000">
+                    <tspan x="20.114418" y="80.9974747">AS YOU PASS</tspan>
                 </text>
                 <path d="M111.114484,74.0373196 L158.114484,74.0373196 L158.114484,136.03732 L111.114484,136.03732 L111.114484,74.0373196 Z M120.028277,85.8800162 L120.028277,124.891252 L149.200691,124.891252 L149.200691,85.8800162 L120.028277,85.8800162 Z M65.684293,98.419342 L65.684293,122.801365 L65.684293,123.497994 L94.046362,123.497994 L94.046362,110.958668 L71.3567068,110.958668 L71.3567068,98.419342 L102.960155,98.419342 L102.960155,136.03732 L55.9601551,136.03732 L55.9601551,74.0373196 L102.960155,74.0373196 L102.960155,85.8800162 L65.684293,85.8800162 L65.684293,98.419342 Z" id="Combined-Shape" fill="#000000" transform="translate(107.037320, 105.037320) rotate(-45.000000) translate(-107.037320, -105.037320) "></path>
                 <path d="M177,158 L148,174 L177,190 L142,190 L127.5,182 L53,182 L53,190 L24,174 L53,158 L53,167 L125.6875,167 L142,158 L177,158 Z" id="Combined-Shape" fill="#FF0000"></path>
