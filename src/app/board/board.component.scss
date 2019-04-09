@@ -11,10 +11,10 @@
   justify-self: center;
 }
 
-// .b0 {
-//   grid-row: 11;
-//   grid-column: 11;
-// }
+.b0 {
+  grid-row: 11;
+  grid-column: 11;
+}
 
 .b1 {
   grid-row: 11;
@@ -171,44 +171,40 @@
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b31 {
+.b33 {
   grid-row: 4;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b33 {
+.b34 {
   grid-row: 5;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b34 {
+.b35 {
   grid-row: 6;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b35 {
+.b36 {
   grid-row: 7;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b36 {
+.b37 {
   grid-row: 8;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b37 {
+.b38 {
   grid-row: 9;
   grid-column: 11;
   transform: rotate(270deg);
 }
-.b38 {
+.b39 {
   grid-row: 10;
   grid-column: 11;
   transform: rotate(270deg);
-}
-.b39 {
-  grid-row: 11;
-  grid-column: 11;
 }
 .b40 {
   grid-row: 11;
@@ -386,7 +382,6 @@
 #freeParking {
   grid-row: 1;
   grid-column: 1;
-  transform: rotate(90deg);
   width: 100%;
   height: 100%;
 }
@@ -466,7 +461,6 @@
 #goToJail {
   grid-row: 1;
   grid-column: 11;
-  transform: rotate(180deg);
   width: 100%;
   height: 100%;
 }
