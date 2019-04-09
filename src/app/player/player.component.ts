@@ -45,11 +45,21 @@ export class PlayerComponent implements OnInit {
   }
 
   movePlayer() {
-    this.playerMove = this.roll1 + this.roll2;
-    this.players.location = this.playerMove + this.players.location;
-    if ( this.players.location >= 40 ) {
-      this.players.location -= 40;
-      this.players.money += 200;
+    if (this.players.location===40){
+      if (this.roll1===this.roll2) {
+        this.players.location=10;
+      } else if (this.roll1!==this.roll2){
+        this.players.location=40;
+      }
+    } else if (this.players.location <= 39){
+      this.playerMove = this.roll1 + this.roll2;
+      this.players.location = this.playerMove + this.players.location;
+      if ( this.players.location >= 39 ) {
+        this.players.location -= 39;
+        this.players.money += 200;
+      } else if (this.players.location===30 ){
+        this.players.location=40;
+      }
     }
     console.log(this.players.location);
   }

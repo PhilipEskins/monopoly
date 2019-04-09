@@ -1,7 +1,7 @@
 import { Property } from './properties.model';
 
 export const PROPERTY: Property[] = [
-  new Property(0, 0, 200),
+  new Property(0, 0, 0),
   new Property(1, 60, 2),
   new Property(2, 0, 0),
   new Property(3, 60, 4),
