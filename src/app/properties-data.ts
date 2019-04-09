@@ -1,11 +1,11 @@
 import { Property } from './properties.model';
 
 export const PROPERTY: Property[] = [
-  new Property(0, 0, 200),
+  new Property(0, 0, 0),
   new Property(1, 60, 2),
   new Property(2, 0, 0),
   new Property(3, 60, 4),
-  new Property(4, -200, 0),
+  new Property(4, 0, 0),
   new Property(5, 200, 0),
   new Property(6, 100, 6),
   new Property(7, 0, 0),
@@ -39,7 +39,7 @@ export const PROPERTY: Property[] = [
   new Property(35, 200, 0),
   new Property(36, 0, 0),
   new Property(37, 350, 35),
-  new Property(38, -75, 0),
+  new Property(38, 0, 0),
   new Property(39, 400, 50),
   new Property(40, 0, 0),
 ];
