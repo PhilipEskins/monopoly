@@ -1,0 +1,8 @@
+{ "players": [{
+    "money": 1500,
+    "location": 0,
+    "name": "Mr.Monopoly",
+    "ifActive": true,
+    "playerPiece": "car"
+    }]
+}
