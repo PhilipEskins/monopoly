@@ -46,6 +46,8 @@ Create Property Data | Yes
 Monopoly Board | Yes
 Monopoly Pieces | Yes
 Monopoly Board Setup | No
+Buy Properties | No
+Peice Movement | No
 
 
 ## STRETCH GOALS
@@ -57,7 +59,7 @@ Homes & Hotels | No
 Multiplayer | No
 Free Parking | No
 $200 Pass GO | No
-Jail | No
+Jail | Yes
 Firebase Data | No
 
 
