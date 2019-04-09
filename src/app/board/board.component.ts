@@ -50,7 +50,6 @@ export class BoardComponent implements OnInit {
 
   movePlayer() {
     this.taxes();
-    console.log(this.players.money + "first")
     if (this.players.location===40){
       if (this.roll1===this.roll2) {
         this.players.location=10;
@@ -67,7 +66,6 @@ export class BoardComponent implements OnInit {
         this.players.location=40;
       }
     }
-    console.log(this.players.location);
   }
 
   taxes() {
@@ -79,7 +77,6 @@ export class BoardComponent implements OnInit {
   }
 
   buyingProperty() {
-    console.log(this.players.location);
     if(this.players.location===2 || this.players.location===7 || this.players.location===10 || this.players.location===17 || this.players.location===22 || this.players.location===33 || this.players.location===36){
       alert("cant buy fool")
     } else {
@@ -98,7 +95,6 @@ export class BoardComponent implements OnInit {
     const currentLocation = this.players.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
-    console.log(numToString);
   }
 
   removeClass () {
@@ -108,7 +104,6 @@ export class BoardComponent implements OnInit {
 
     car.classList.remove(`${numToString}`);
 
-    console.log(numToString);
   }
 
 }
