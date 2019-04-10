@@ -44,13 +44,25 @@ export class PlayerComponent implements OnInit {
   }
 
   endTurn() {
-    this.players[this.position].ifActive =  false;
+    this.ifActive = false;
+    this.newInfo();;
     this.position += 1;
-    if( this.position >= this.players.length) {
+    if(this.position >= this.players.length) {
       this.position = 0,
       this.players[this.position].ifActive = true;
-    };
-    this.players[this.position].ifActive = true;
+      this.setValues(this.players[this.position]);
+      this.newInfo();
+    } else {
+      this.players[this.position].ifActive = true;
+      this.setValues(this.players[this.position]);
+      this.newInfo();
+    }
+  }
+
+  newInfo() {
+    console.log(this.ifActive);
+    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece);
+    console.log("newInfo");
   }
 
 
@@ -62,7 +74,7 @@ export class PlayerComponent implements OnInit {
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
-    console.log(playerObj);
+    console.log(playerObj.money);
     this.playerDiceRoll();
   }
   playerDiceRoll() {
@@ -138,16 +150,16 @@ export class PlayerComponent implements OnInit {
   }
 
   movement() {
-    const car = document.getElementById("car");
+    const car = document.getElementById(this.playerPiece);
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
     console.log(this.propertiesOwned);
-    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece)
+    this.newInfo();
   }
 
   removeClass () {
-    const car = document.getElementById("car");
+    const car = document.getElementById(this.playerPiece);
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
 
