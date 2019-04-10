@@ -17,7 +17,6 @@ export class PlayerComponent implements OnInit {
   players: Player[];
   location: number = 0;
   money: number;
-  propertiesOwned: number[];
   name: string;
   ifActive: boolean;
   playerPiece: string;
@@ -61,7 +60,7 @@ export class PlayerComponent implements OnInit {
   }
 
   newInfo() {
-    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece);
+    this.databaseService.updatePlayer(this.key, this.money, this.location, this.name, this.ifActive, this.playerPiece);
   }
 
 
@@ -69,12 +68,11 @@ export class PlayerComponent implements OnInit {
     this.key = playerObj.$key;
     this.location = playerObj.location;
     this.money = playerObj.money;
-    this.propertiesOwned = playerObj.propertiesOwned;
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
-    // this.playerDiceRoll();
   }
+
   playerDiceRoll() {
     this.setValues(this.players[this.position]);
     this.removeClass();
@@ -127,25 +125,6 @@ export class PlayerComponent implements OnInit {
     }
   }
 
-  buyingProperty() {
-    if(this.location===2 || this.location===4 || this.location===7 || this.location===10 || this.location===17 || this.location===22 || this.location===33 || this.location===36 || this.location===38){
-
-      alert("cant buy fool")
-    } else {
-      if (this.prop[this.location].owner!==null){
-        alert("pay rent");
-      } else if (this.money<this.prop[this.location].price){
-        alert("not enough funds");
-      } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
-        if (confirm("Are you sure you want to buy this?")){
-          (this.propertiesOwned).push(this.prop[this.location].location);
-          this.prop[this.location].owner = true;
-          this.money -= this.prop[this.location].price;
-        }
-
-      }
-    }
-  }
 
   movement() {
     const car = document.getElementById(this.playerPiece);
