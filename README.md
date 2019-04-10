@@ -62,6 +62,7 @@ Multiplayer | Yes
 $200 Pass GO | Yes
 Jail | Yes
 Firebase Data | Yes
+Double Dice X3 to Jail | No
 
 
 ## Technologies Used
