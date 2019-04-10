@@ -14,7 +14,7 @@ import { DatabaseService } from '../database.service';
 })
 export class PlayerComponent implements OnInit {
   prop: Property[];
-  players: FirebaseListObservable<any[]>;
+  players: Player[];
   location: number = 0;
   money: number;
   propertiesOwned: number[];
@@ -22,7 +22,7 @@ export class PlayerComponent implements OnInit {
   ifActive: boolean;
   playerPiece: string;
   key: string;
-
+  position = 0;
   roll1: number;
   roll2: number;
   doubleCount: number = 0;
@@ -33,22 +33,44 @@ export class PlayerComponent implements OnInit {
 
 
   ngOnInit() {
-    this.players = this.databaseService.getPlayers();
+    this.databaseService.getPlayers().subscribe(dataLastEmittedFromObserver => {
+      return this.players = dataLastEmittedFromObserver;
+    })
     this.prop = this.propertyService.getProperties();
     this.movement();
   }
+
+  endTurn() {
+    this.ifActive = false;
+    this.newInfo();;
+    this.position += 1;
+    if(this.position >= this.players.length) {
+      this.position = 0,
+      this.players[this.position].ifActive = true;
+      this.setValues(this.players[this.position]);
+      this.newInfo();
+    } else {
+      this.players[this.position].ifActive = true;
+      this.setValues(this.players[this.position]);
+      this.newInfo();
+    }
+  }
+
+  newInfo() {
+    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece);
+  }
+
 
   setValues(playerObj) {
     this.key = playerObj.$key;
     this.location = playerObj.location;
     this.money = playerObj.money;
-    this.propertiesOwned = [];
+    this.propertiesOwned = playerObj.propertiesOwned;
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
     this.playerDiceRoll();
   }
-
   playerDiceRoll() {
     this.removeClass();
     this.roll1 = this.diceService.diceRoll();
@@ -56,7 +78,6 @@ export class PlayerComponent implements OnInit {
     this.taxes();
     this.doubleCheck();
     this.movement();
-    this.buyingProperty();
   }
 
   gameStart() {
@@ -102,38 +123,53 @@ export class PlayerComponent implements OnInit {
   }
 
   buyingProperty() {
-    if(this.location===2 || this.location===4 || this.location===7 || this.location===10 || this.location===17 || this.location===22 || this.location===33 || this.location===36 || this.location===38){
+    if(this.location===2 || this.location===4 || this.location===7 || this.location===10 || this.location===17 || this.location===20 || this.location===22 || this.location===33 || this.location===36 || this.location===38 || this.location===40){
 
       alert("cant buy fool")
-    } else {
-      if (this.prop[this.location].owner!==null){
-        alert("pay rent");
-        
+    } else if (this.prop[this.location].owner!==null){
 
+        if(this.prop[this.location].owner === this.players[this.position].name) {
+          alert("you own this")
+        } else {
+          const player1Money = this.money;
+          if (this.prop[this.location].owner === this.players[0].name){
+            this.players[0].money += this.prop[this.location].rent;
+            this.players[1].money -= this.prop[this.location].rent;
+            this.newInfo();
+          } else if (this.prop[this.location].owner === this.players[1].name){
+            this.players[1].money += this.prop[this.location].rent;
+            this.players[0].money -= this.prop[this.location].rent;
+            this.newInfo();
+          }
+          alert("pay rent");
+        }
       } else if (this.money<this.prop[this.location].price){
         alert("not enough funds");
       } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
         if (confirm("Are you sure you want to buy this?")){
           (this.propertiesOwned).push(this.prop[this.location].location);
-          this.prop[this.location].owner = true;
+          this.prop[this.location].owner = this.name;
           this.money -= this.prop[this.location].price;
           return this.money;
         }
-
       }
     }
-  }
+
+
+
+
 
   movement() {
-    const car = document.getElementById("car");
+    const car = document.getElementById(this.playerPiece);
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
-    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece)
+
+    this.newInfo();
   }
 
   removeClass () {
-    const car = document.getElementById("car");
+    const car = document.getElementById(this.playerPiece);
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
 

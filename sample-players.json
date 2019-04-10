@@ -4,5 +4,13 @@
     "name": "Mr.Monopoly",
     "ifActive": true,
     "playerPiece": "car"
-    }]
+  },
+  {
+    "money": 1500,
+    "location": 0,
+    "name": "Landlord",
+    "ifActive": false,
+    "playerPiece": "hat"
+  }  
+  ]
 }
