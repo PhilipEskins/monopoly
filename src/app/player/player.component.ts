@@ -59,6 +59,10 @@ export class PlayerComponent implements OnInit {
     this.buyingProperty();
   }
 
+  gameStart() {
+    this.location = 0;
+  }
+
 
   doubleCheck() {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
@@ -68,9 +72,6 @@ export class PlayerComponent implements OnInit {
       this.doubleCount = 0;
     }
     this.movePlayer();
-  }
-  consolelogging(param) {
-    console.log(param);
   }
 
   movePlayer() {
@@ -126,7 +127,6 @@ export class PlayerComponent implements OnInit {
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
-    console.log(this.propertiesOwned);
     this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece)
   }
 
@@ -136,6 +136,5 @@ export class PlayerComponent implements OnInit {
     const numToString = "b" + currentLocation.toString();
 
     car.classList.remove(`${numToString}`);
-    console.log(numToString);
   }
 }
