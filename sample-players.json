@@ -3,14 +3,16 @@
     "location": 0,
     "name": "Mr.Monopoly",
     "ifActive": true,
-    "playerPiece": "car"
+    "playerPiece": "car",
+    "propertiesOwned": [0]
   },
   {
     "money": 1500,
     "location": 0,
     "name": "Landlord",
     "ifActive": false,
-    "playerPiece": "hat"
-  }  
+    "playerPiece": "hat",
+    "propertiesOwned": [0]
+  }
   ]
 }

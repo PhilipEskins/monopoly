@@ -35,7 +35,6 @@ export class PlayerComponent implements OnInit {
   ngOnInit() {
     this.databaseService.getPlayers().subscribe(dataLastEmittedFromObserver => {
       return this.players = dataLastEmittedFromObserver;
-      console.log(this.players[1].$key);
 
     })
     // this.players = this.databaseService.getPlayers();
@@ -44,8 +43,10 @@ export class PlayerComponent implements OnInit {
   }
 
   endTurn() {
+    const hide = document.getElementById("hideRoll");
+    hide.classList.remove("hideRolll") ;
     this.ifActive = false;
-    this.newInfo();;
+    this.newInfo();
     this.position += 1;
     if(this.position >= this.players.length) {
       this.position = 0,
@@ -60,9 +61,7 @@ export class PlayerComponent implements OnInit {
   }
 
   newInfo() {
-    console.log(this.ifActive);
     this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece);
-    console.log("newInfo");
   }
 
 
@@ -70,31 +69,31 @@ export class PlayerComponent implements OnInit {
     this.key = playerObj.$key;
     this.location = playerObj.location;
     this.money = playerObj.money;
-    this.propertiesOwned = [];
+    this.propertiesOwned = playerObj.propertiesOwned;
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
-    console.log(playerObj.money);
-    this.playerDiceRoll();
+    // this.playerDiceRoll();
   }
   playerDiceRoll() {
+    this.setValues(this.players[this.position]);
     this.removeClass();
     this.roll1 = this.diceService.diceRoll();
     this.roll2 = this.diceService.diceRoll();
     this.taxes();
     this.doubleCheck();
     this.movement();
-    console.log(this.location)
-
   }
 
 
   doubleCheck() {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
+    const hide = document.getElementById("hideRoll");
     if (doubleOcc === true) {
       this.doubleCount++;
     } else {
       this.doubleCount = 0;
+      hide.classList.add("hideRolll") ;
     }
     this.movePlayer();
   }
@@ -102,7 +101,6 @@ export class PlayerComponent implements OnInit {
   movePlayer() {
 
     this.taxes();
-    console.log(this.money + "first")
     if (this.location===40){
       if (this.roll1===this.roll2) {
         this.location=10;
@@ -154,7 +152,6 @@ export class PlayerComponent implements OnInit {
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
-    console.log(this.propertiesOwned);
     this.newInfo();
   }
 
@@ -164,6 +161,5 @@ export class PlayerComponent implements OnInit {
     const numToString = "b" + currentLocation.toString();
 
     car.classList.remove(`${numToString}`);
-    console.log(numToString);
   }
 }
