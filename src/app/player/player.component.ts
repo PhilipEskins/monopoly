@@ -14,7 +14,7 @@ import { DatabaseService } from '../database.service';
 })
 export class PlayerComponent implements OnInit {
   prop: Property[];
-  players: FirebaseListObservable<any[]>;
+  players: Player[];
   location: number = 0;
   money: number;
   propertiesOwned: number[];
@@ -22,7 +22,7 @@ export class PlayerComponent implements OnInit {
   ifActive: boolean;
   playerPiece: string;
   key: string;
-
+  position = 0;
   roll1: number;
   roll2: number;
   doubleCount: number = 0;
@@ -33,10 +33,26 @@ export class PlayerComponent implements OnInit {
 
 
   ngOnInit() {
-    this.players = this.databaseService.getPlayers();
+    this.databaseService.getPlayers().subscribe(dataLastEmittedFromObserver => {
+      return this.players = dataLastEmittedFromObserver;
+      console.log(this.players[1].$key);
+
+    })
+    // this.players = this.databaseService.getPlayers();
     this.prop = this.propertyService.getProperties();
     this.movement();
   }
+
+  endTurn() {
+    this.players[this.position].ifActive =  false;
+    this.position += 1;
+    if( this.position >= this.players.length) {
+      this.position = 0,
+      this.players[this.position].ifActive = true;
+    };
+    this.players[this.position].ifActive = true;
+  }
+
 
   setValues(playerObj) {
     this.key = playerObj.$key;
@@ -46,9 +62,9 @@ export class PlayerComponent implements OnInit {
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
+    console.log(playerObj);
     this.playerDiceRoll();
   }
-
   playerDiceRoll() {
     this.removeClass();
     this.roll1 = this.diceService.diceRoll();
