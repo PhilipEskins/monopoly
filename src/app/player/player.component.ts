@@ -17,7 +17,6 @@ export class PlayerComponent implements OnInit {
   players: Player[];
   location: number = 0;
   money: number;
-  propertiesOwned: number[];
   name: string;
   ifActive: boolean;
   playerPiece: string;
@@ -41,8 +40,10 @@ export class PlayerComponent implements OnInit {
   }
 
   endTurn() {
+    const hide = document.getElementById("hideRoll");
+    hide.classList.remove("hideRolll") ;
     this.ifActive = false;
-    this.newInfo();;
+    this.newInfo();
     this.position += 1;
     if(this.position >= this.players.length) {
       this.position = 0,
@@ -57,7 +58,7 @@ export class PlayerComponent implements OnInit {
   }
 
   newInfo() {
-    this.databaseService.updatePlayer(this.key, this.money, this.location, this.propertiesOwned, this.name, this.ifActive, this.playerPiece);
+    this.databaseService.updatePlayer(this.key, this.money, this.location, this.name, this.ifActive, this.playerPiece);
   }
 
 
@@ -65,13 +66,13 @@ export class PlayerComponent implements OnInit {
     this.key = playerObj.$key;
     this.location = playerObj.location;
     this.money = playerObj.money;
-    this.propertiesOwned = playerObj.propertiesOwned;
     this.name = playerObj.name;
     this.ifActive = playerObj.ifActive;
     this.playerPiece = playerObj.playerPiece;
-    this.playerDiceRoll();
   }
+
   playerDiceRoll() {
+    this.setValues(this.players[this.position]);
     this.removeClass();
     this.roll1 = this.diceService.diceRoll();
     this.roll2 = this.diceService.diceRoll();
@@ -80,22 +81,22 @@ export class PlayerComponent implements OnInit {
     this.movement();
   }
 
-  gameStart() {
-    this.location = 0;
-  }
 
 
   doubleCheck() {
     const doubleOcc = this.diceService.doubles(this.roll1, this.roll2);
+    const hide = document.getElementById("hideRoll");
     if (doubleOcc === true) {
       this.doubleCount++;
     } else {
       this.doubleCount = 0;
+      hide.classList.add("hideRolll") ;
     }
     this.movePlayer();
   }
 
   movePlayer() {
+    this.taxes();
     if (this.location===40){
       if (this.roll1===this.roll2) {
         this.location=10;
@@ -122,6 +123,7 @@ export class PlayerComponent implements OnInit {
     }
   }
 
+
   buyingProperty() {
     if(this.location===2 || this.location===4 || this.location===7 || this.location===10 || this.location===17 || this.location===20 || this.location===22 || this.location===33 || this.location===36 || this.location===38 || this.location===40){
 
@@ -147,7 +149,6 @@ export class PlayerComponent implements OnInit {
         alert("not enough funds");
       } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
         if (confirm("Are you sure you want to buy this?")){
-          (this.propertiesOwned).push(this.prop[this.location].location);
           this.prop[this.location].owner = this.name;
           this.money -= this.prop[this.location].price;
           return this.money;
@@ -156,15 +157,11 @@ export class PlayerComponent implements OnInit {
     }
 
 
-
-
-
   movement() {
     const car = document.getElementById(this.playerPiece);
     const currentLocation = this.location;
     const numToString = "b" + currentLocation.toString();
     car.classList.add(`${numToString}`);
-
     this.newInfo();
   }
 

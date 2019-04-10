@@ -1,4 +1,4 @@
-<button (click)="gameStart()">new game</button>
+
 <div>
   <div *ngFor="let player of players">
     {{player.name}}<br>
@@ -9,9 +9,11 @@
       {{roll2}}<br>
 
     <div *ngIf="player.ifActive===true">
-      <button (click)="setValues(player) ">Roll Dice</button>
-      <button (click)="buyingProperty()">CLICK</button>
-      <button (click)="endTurn()">End Your Turn</button>
+      <div id="hideButtons">
+        <button (click)="buyingProperty()">CLICK</button>
+        <button (click)="endTurn()">End Your Turn</button>
+      </div>
     </div>
   </div>
+  <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button>
 </div>

@@ -14,12 +14,11 @@ constructor(private database: AngularFireDatabase){
     return this.players;
   }
 
-  updatePlayer(playerKey, playerMoney, playerLocation, playerPropertiesOwned, playerName, playerIfActive, playerPlayerPiece) {
+  updatePlayer(playerKey, playerMoney, playerLocation, playerName, playerIfActive, playerPlayerPiece) {
     const playerInFirebase = this.getPlayerToUpdate(playerKey);
     playerInFirebase.update({
       money: playerMoney,
       location: playerLocation,
-      propertiesOwned: playerPropertiesOwned,
       name: playerName,
       ifActive: playerIfActive,
       playerPiece: playerPlayerPiece
