@@ -56,8 +56,7 @@ export class PlayerComponent implements OnInit {
     this.taxes();
     this.doubleCheck();
     this.movement();
-    console.log(this.location)
-
+    this.buyingProperty();
   }
 
 
@@ -70,11 +69,11 @@ export class PlayerComponent implements OnInit {
     }
     this.movePlayer();
   }
+  consolelogging(param) {
+    console.log(param);
+  }
 
   movePlayer() {
-
-    this.taxes();
-    console.log(this.money + "first")
     if (this.location===40){
       if (this.roll1===this.roll2) {
         this.location=10;
@@ -115,6 +114,7 @@ export class PlayerComponent implements OnInit {
           (this.propertiesOwned).push(this.prop[this.location].location);
           this.prop[this.location].owner = true;
           this.money -= this.prop[this.location].price;
+          return this.money;
         }
 
       }
