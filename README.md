@@ -35,8 +35,8 @@ Monopoly was built by 4 junior web developers during Javascript Group Week at Ep
 
 Goals | Finished?
 ----------|----------|
-Create Player Object | unknown
-Create Space Object | unknown
+Create Player Object | Yes
+Create Space Object | Yes
 Create Dice Roll | Yes
 Create Community Cards Data | Yes
 Create Chance Cards Data | Yes
@@ -45,9 +45,9 @@ Random Chance Cards | Yes
 Create Property Data | Yes
 Monopoly Board | Yes
 Monopoly Pieces | Yes
-Monopoly Board Setup | No
-Buy Properties | No
-Peice Movement | No
+Monopoly Board Setup | Yes
+Buy Properties | Yes
+Piece Movement | Yes
 
 
 ## STRETCH GOALS
@@ -55,12 +55,13 @@ Peice Movement | No
 Goals | Finished?
 ----------|----------|
 Money Pot | No
+Players use Community Cards | No
+Players use Chance Cards | No
 Homes & Hotels | No
-Multiplayer | No
-Free Parking | No
-$200 Pass GO | No
+Multiplayer | Yes
+$200 Pass GO | Yes
 Jail | Yes
-Firebase Data | No
+Firebase Data | Yes
 
 
 ## Technologies Used
