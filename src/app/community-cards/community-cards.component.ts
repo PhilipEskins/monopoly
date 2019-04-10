@@ -24,6 +24,7 @@ export class CommunityCardsComponent implements OnInit {
   communityCardGenerator() {
     let card = Math.floor(Math.random() * this.communityCards.length);
     this.randomCommunityCard = this.communityCards[card].description;
+
     this.playedCommunityCards.push(this.communityCards[card]);
 
     if(this.communityCards.length <= 1) {

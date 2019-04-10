@@ -108,6 +108,8 @@ export class PlayerComponent implements OnInit {
     } else {
       if (this.prop[this.location].owner!==null){
         alert("pay rent");
+        
+
       } else if (this.money<this.prop[this.location].price){
         alert("not enough funds");
       } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
