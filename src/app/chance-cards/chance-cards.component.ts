@@ -11,6 +11,8 @@ import { ChanceCardsService } from '../chance-cards.service';
 
 export class ChanceCardsComponent implements OnInit {
   chanceCards: ChanceCard[];
+  playedChanceCards = [];
+
   randomChanceCard;
 
   constructor(private chanceCardsService: ChanceCardsService) { }
@@ -22,6 +24,13 @@ export class ChanceCardsComponent implements OnInit {
   chanceCardGenerator() {
     let card = Math.floor(Math.random() * this.chanceCards.length);
     this.randomChanceCard = this.chanceCards[card].description;
+    this.playedChanceCards.push(this.chanceCards[card]);
+    
+    if (this.chanceCards.length <= 1) {
+      this.chanceCards = this.playedChanceCards;
+      this.playedChanceCards = [];
+    } else {
+      this.chanceCards.splice(card, 1);
+    }
   }
-
 }
