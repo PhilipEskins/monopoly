@@ -29,7 +29,7 @@ export class PlayerComponent implements OnInit {
   position = 0;
   roll1: number;
   roll2: number;
-  doubleCount: number = 2;
+  doubleCount: number = 0;
   playerMove: number;
 
 
@@ -115,15 +115,15 @@ export class PlayerComponent implements OnInit {
     if (doubleOcc === true) {
       this.doubleCount++;
       if(this.doubleCount === 3){
-        this.location === 40;
+        this.location = 40;
         this.doubleCount = 0;
+        this.roll1 -= 1;
       }
     }
     else {
       this.doubleCount = 0;
       hide.classList.add("hideRolll") ;
     }
-    console.log(this.doubleCount);
     this.movePlayer();
   }
 
@@ -146,6 +146,7 @@ export class PlayerComponent implements OnInit {
         this.location=40;
       }
     }
+    console.log(this.location);
   }
 
   taxes() {
