@@ -59,10 +59,6 @@ export class PlayerComponent implements OnInit {
     this.movement();
   }
 
-  consolelogging() {
-    console.log(this.communityCards);
-  }
-
   endTurn() {
     const hide = document.getElementById("hideRoll");
     hide.classList.remove("hideRolll") ;
@@ -164,31 +160,31 @@ export class PlayerComponent implements OnInit {
       alert("cant buy fool")
     } else if (this.prop[this.location].owner!==null){
 
-        if(this.prop[this.location].owner === this.players[this.position].name) {
-          alert("you own this")
-        } else {
-          const player1Money = this.money;
-          if (this.prop[this.location].owner === this.players[0].name){
-            this.players[0].money += this.prop[this.location].rent;
-            this.players[1].money -= this.prop[this.location].rent;
-            this.newInfo();
-          } else if (this.prop[this.location].owner === this.players[1].name){
-            this.players[1].money += this.prop[this.location].rent;
-            this.players[0].money -= this.prop[this.location].rent;
-            this.newInfo();
-          }
-          alert("pay rent");
+      if(this.prop[this.location].owner === this.players[this.position].name) {
+        alert("you own this")
+      } else {
+        const player1Money = this.money;
+        if (this.prop[this.location].owner === this.players[0].name){
+          this.players[0].money += this.prop[this.location].rent;
+          this.players[1].money -= this.prop[this.location].rent;
+          this.newInfo();
+        } else if (this.prop[this.location].owner === this.players[1].name){
+          this.players[1].money += this.prop[this.location].rent;
+          this.players[0].money -= this.prop[this.location].rent;
+          this.newInfo();
         }
-      } else if (this.money<this.prop[this.location].price){
-        alert("not enough funds");
-      } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
-        if (confirm("Are you sure you want to buy this?")){
-          this.prop[this.location].owner = this.name;
-          this.money -= this.prop[this.location].price;
-          return this.money;
-        }
+        alert("pay rent");
+      }
+    } else if (this.money<this.prop[this.location].price){
+      alert("not enough funds");
+    } else if (this.prop[this.location].owner == null && this.money>=this.prop[this.location].price){
+      if (confirm("Are you sure you want to buy this?")){
+        this.prop[this.location].owner = this.name;
+        this.money -= this.prop[this.location].price;
+        return this.money;
       }
     }
+  }
 
 
   movement() {
@@ -211,7 +207,6 @@ export class PlayerComponent implements OnInit {
     let card = Math.floor(Math.random() * this.communityCards.length);
 
     if (this.location===2 || this.location===17 || this.location===33){
-      console.log(this.randomCommunityCard)
       this.randomCommunityCard = this.communityCards[card].description;
 
       this.playedCommunityCards.push(this.communityCards[card]);
@@ -222,7 +217,6 @@ export class PlayerComponent implements OnInit {
       } else {
         this.communityCards.splice(card, 1);
       }
-      return this.randomCommunityCard;
     }
   }
 
@@ -230,7 +224,6 @@ export class PlayerComponent implements OnInit {
     let card = Math.floor(Math.random() * this.chanceCards.length);
 
     if (this.location===7 || this.location===12 || this.location===36){
-      console.log(this.randomChanceCard)
       this.randomChanceCard = this.chanceCards[card].description;
       this.playedChanceCards.push(this.chanceCards[card]);
 
@@ -240,7 +233,6 @@ export class PlayerComponent implements OnInit {
       } else {
         this.chanceCards.splice(card, 1);
       }
-      return this.randomChanceCard;
     }
 
   }

@@ -2,7 +2,7 @@
 
 ## Description
 
-Monopoly was built by 4 junior web developers during Javascript Group Week at Epicodus. The application is based on Object Oriented programming with Angular and the board remake was built from Sketch.
+Monopoly was built by 4 junior web developers during Javascript Group Week at Epicodus. The application is based on Object Oriented programming with Angular and the board remake was built from Sketch. Firebase stores player information while the properties, chance and community cards are hard coded into the project folder.
 
 
 #### By Philip Eskins, Nayomi Morita, Drew Yoxsimer, Maly Phongsavanh
@@ -67,9 +67,13 @@ Double Dice X3 to Jail | No
 
 ## Technologies Used
 
+* Firebase
 * JavaScript
 * Angular
 * Sketch
+* CSS
+* SCSS
+
 
 ## Support and contact details
 
