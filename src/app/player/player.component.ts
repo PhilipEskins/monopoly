@@ -210,7 +210,6 @@ export class PlayerComponent implements OnInit {
       } else {
         this.communityCards.splice(card, 1);
       }
-      return this.randomCommunityCard;
     }
   }
 
@@ -227,7 +226,6 @@ export class PlayerComponent implements OnInit {
       } else {
         this.chanceCards.splice(card, 1);
       }
-      return this.randomChanceCard;
     }
 
   }
