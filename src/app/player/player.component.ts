@@ -27,7 +27,7 @@ export class PlayerComponent implements OnInit {
   position = 0;
   roll1: number;
   roll2: number;
-  doubleCount: number = 0;
+  doubleCount: number = 2;
   playerMove: number;
 
   communityCards: CommunityCard[];
@@ -97,10 +97,16 @@ export class PlayerComponent implements OnInit {
     const hide = document.getElementById("hideRoll");
     if (doubleOcc === true) {
       this.doubleCount++;
-    } else {
+      if(this.doubleCount === 3){
+        this.location === 40;
+        this.doubleCount = 0;
+      }
+    }
+    else {
       this.doubleCount = 0;
       hide.classList.add("hideRolll") ;
     }
+    console.log(this.doubleCount);
     this.movePlayer();
   }
 

@@ -2,12 +2,11 @@
   display: flex;
   flex-flow: row nowrap;
   width: 100%;
-  border: 1px solid orange;
 }
 .board {
   display: grid;
   grid: 10vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 10vw/ 10vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 6vw 10vw;
-  max-width: 90%;
+  max-width: 80vw;
 }
 #shoe {
   width: 3.5vw;
@@ -19,6 +18,14 @@
   align-self: center;
   justify-self: center;
 }
+.playerInformation {
+  background-image:url("../../assets/img/moneyImg.jpg");
+  // margin: 10px;
+  width: 20vw;
+  border: 3px solid black;
+}
+//Don't mess with anything below this comment
+//Creates board and allows pieces to move around the board
 .b0 {
   grid-row: 11;
   grid-column: 11;
@@ -62,6 +69,7 @@
 .b10 {
   grid-row: 11;
   grid-column: 1;
+  transform: translateX(-3vw) translateY(3vw);
 }
 .b11 {
   grid-row: 10;
@@ -534,10 +542,4 @@
   grid-row: 7/ span 2;
   grid-column: 7/ span 3;
   transform: rotate(-45deg);
-}
-.playerInformation {
-  background-image:url("../../assets/img/moneyImg.jpg");
-  margin: 10px;
-  width: 23%;
-  border: 3px solid black;
 }
