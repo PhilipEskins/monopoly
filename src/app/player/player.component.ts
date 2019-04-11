@@ -50,17 +50,17 @@ export class PlayerComponent implements OnInit {
 
 
   ngOnInit() {
+    this.communityCards = this.communityCardsService.getCommunityCards();
+    this.chanceCards = this.chanceCardsService.getChanceCards();
     this.databaseService.getPlayers().subscribe(dataLastEmittedFromObserver => {
       return this.players = dataLastEmittedFromObserver;
     })
     this.prop = this.propertyService.getProperties();
     this.movement();
-    this.communityCards = this.communityCardsService.getCommunityCards();
-    this.chanceCards = this.chanceCardsService.getChanceCards();
   }
 
   consolelogging() {
-    console.log(this.communityCardsService.getCommunityCards());
+    console.log(this.communityCards);
   }
 
   endTurn() {
