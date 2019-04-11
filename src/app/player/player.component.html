@@ -1,51 +1,41 @@
-
 <div class="displayClass">
+  <div *ngFor="let player of players" class="playerDisplay">
+    <div class="moneyDisplayer">
+      <h2>{{player.name}}</h2>
+      <h3><span class="money">M</span> {{player.money}}</h3>
+    </div>
 
+    <div *ngIf="player.ifActive===true">
+      <div id="hideButtons">
+        <button (click)="buyingProperty()">Buy Property</button>
+        <button (click)="endTurn()">End Turn</button>
+      </div>
+    </div>
+  </div><br>
 
-<div *ngFor="let player of players" class="playerDisplay">
-  <div class="moneyDisplayer">
-    <h2>{{player.name}}</h2>
-    <h3><span class="money">M</span> {{player.money}}</h3>
-  </div>
-
-  <div *ngIf="player.ifActive===true">
-    <div id="hideButtons">
-      <button (click)="buyingProperty()">Buy Property</button>
-      <button (click)="endTurn()">End Turn</button>
+  <div class="diceArea">
+    <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button><br>
+    <div class="rolldisplay">
+      <h3><strong>{{roll1}}</strong></h3>
+      <h3><strong>{{roll2}}</strong></h3>
     </div>
   </div>
-</div><br>
 
-<div class="diceArea">
-  <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button><br>
-  <div class="rolldisplay">
-    <h3><strong>{{roll1}}</strong></h3>
-    <h3><strong>{{roll2}}</strong></h3>
-  </div>
-</div>
-
-  <div class="cards">
-
-  <div id="communityContainer">
-    <div id="randomCard">
+  <div class="playcards">
+    <div id="communityContainer">
       <div id="communityCardContent">
-        <h1>Community Chest</h1>
-        {{randomCommunityCard}}
+        <h2>Community Chest</h2>
+        <p>{{randomCommunityCard}}</p>
       </div>
       <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
     </div>
-  </div>
-
 
     <div id="chanceContainer">
-      <div id="randomCard">
-        <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
-        <div id="chanceCardContent">
-          <h1>Chance Card</h1>
-          {{randomChanceCard}}
-        </div>
+      <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
+      <div id="chanceCardContent">
+        <h2>Chance Card</h2>
+        <p>{{randomChanceCard}}</p>
       </div>
     </div>
-
   </div>
 </div>
