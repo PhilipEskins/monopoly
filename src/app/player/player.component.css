@@ -1,9 +1,9 @@
-.money {
+/* .money {
   text-decoration: line-through;
   font-weight: bold;
   font-size: 1em;
 }
-/.moneyDisplayer {
+.moneyDisplayer {
   display: flex;
   flex-direction: row;
 }
@@ -17,27 +17,27 @@
   border-bottom: 3px solid black;
   padding: 2vw;
   background-color: lightgrey;
+  h2 {
+    text-decoration: underline;
+  }
 }
 
-.playerDisplay h2 {
-  text-decoration: underline;
-}
 
 .diceArea {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: auto;
+  h3 {
+    border: 3px solid black;
+    border-radius: 3px;
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.5em;
+    background-color: white;
+  }
 }
 
-.diceArea h3 {
-  border: 3px solid black;
-  border-radius: 3px;
-  width: 4vw;
-  height: 4vw;
-  font-size: 1.5em;
-  background-color: white;
-}
 
 
 #hideButtons {
@@ -54,11 +54,7 @@
   align-items: flex-end;
   font-size: 1.25em;
 }
-.backgroundColor{
-  width: 100%;
-  height: 100%;
-  color: black;
-}
+
 #hideRoll {
   width: 60%;
   align-self: center;
@@ -79,4 +75,4 @@
 #hideRoll:hover {
   background-color: #f7f5f3;
   transform: scale(1.15);
-}
+} */

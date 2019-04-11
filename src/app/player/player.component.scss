@@ -1,18 +1,80 @@
 .money {
   text-decoration: line-through;
+  font-weight: bold;
+  font-size: 1em;
+}
+.moneyDisplayer {
+  display: flex;
+  flex-direction: column;
 }
 
 .hideRolll{
   display: none;
 }
 
+.playerDisplay {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  padding: 2vw;
+  background-color: lightgrey;
+  h2 {
+    text-decoration: underline;
+  }
+}
+
+.diceArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  h3 {
+    border: 3px solid black;
+    border-radius: 3px;
+    width: 4vw;
+    height: 4vw;
+    font-size: 1.5em;
+    background-color: white;
+  }
+}
+
+#hideButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rolldisplay {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: flex-end;
+  font-size: 1.25em;
+}
+
+#hideRoll {
+  width: 60%;
+  align-self: center;
+  font-size: 1.75em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+#hideRoll:hover {
+  background-color: #f7f5f3;
+  transform: scale(1.15);
+}
+
 #communityContainer {
+  margin: auto;
   text-align: center;
   width: 200px;
   height: 100px;
   background-color: yellow;
   border: 2px solid black;
   padding: 5px;
+  margin-bottom: 1vh;
   #randomCard {
     display: flex;
     flex-flow: row nowrap;
@@ -35,7 +97,11 @@
     }
   }
 }
+
 #chanceContainer {
+  display: flex;
+  justify-content: center;
+  margin: auto;
   text-align: center;
   left: 200px;
   width: 200px;
