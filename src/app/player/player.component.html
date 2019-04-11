@@ -1,19 +1,25 @@
 
 <div>
-  <div *ngFor="let player of players">
-    {{player.name}}<br>
-    {{player.location}}<br>
-    <span class="money">M</span> {{player.money}}<br>
-
-      {{roll1}}<br>
-      {{roll2}}<br>
+  <div *ngFor="let player of players" class="playerDisplay">
+    <div class="moneyDisplayer">
+      <h2>{{player.name}}</h2>
+      <h3><span class="money">M</span> {{player.money}}</h3>
+    </div>
 
     <div *ngIf="player.ifActive===true">
       <div id="hideButtons">
-        <button (click)="buyingProperty()">CLICK</button>
-        <button (click)="endTurn()">End Your Turn</button>
+        <button (click)="buyingProperty()">Buy Property</button>
+        <button (click)="endTurn()">End Turn</button>
       </div>
     </div>
+  </div><br>
+
+  <div class="diceArea">
+    <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button><br>
+    <div class="rolldisplay">
+      <h3><strong>{{roll1}}</strong></h3>
+      <h3><strong>{{roll2}}</strong></h3>
+    </div>
   </div>
-  <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button>
+
 </div>

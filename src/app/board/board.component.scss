@@ -588,9 +588,12 @@
   grid-column: 7/ span 3;
   transform: rotate(-45deg);
 }
-
+.img {
+  position: relative;
+}
 .playerInformation {
-  background-color: red;
+  background-image:url("../../assets/img/moneyImg.jpg");
   margin: 10px;
   width: 23%;
+  border: 3px solid black;
 }
