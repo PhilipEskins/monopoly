@@ -1,3 +1,7 @@
+.displayClass {
+  text-align: center;
+}
+
 .money {
   text-decoration: line-through;
   font-weight: bold;
@@ -66,11 +70,14 @@
   transform: scale(1.15);
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 #communityContainer {
-  margin: auto;
   text-align: center;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
   background-color: yellow;
   border: 2px solid black;
   padding: 5px;
@@ -83,7 +90,8 @@
     width: 100%;
     height: 100%;
     h1{
-      font-size: 1rem;
+      font-size: 1.7rem;
+      margin-top: 0;
     }
     img {
       width: 40%;
@@ -101,11 +109,9 @@
 #chanceContainer {
   display: flex;
   justify-content: center;
-  margin: auto;
   text-align: center;
-  left: 200px;
-  width: 200px;
-  height: 100px;
+  width: 300px;
+  height: 150px;
   background-color: orange;
   border: 2px solid black;
   padding: 5px;
@@ -117,7 +123,8 @@
     width: 100%;
     height: 100%;
     h1{
-      font-size: 1rem;
+      font-size: 1.7rem;
+      margin-top: 0;
     }
     img {
       width: 35%;
@@ -131,4 +138,5 @@
       }
     }
   }
+}
 }

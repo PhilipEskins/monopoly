@@ -1,60 +1,51 @@
 
-  <div *ngFor="let player of players" class="playerDisplay">
-    <div class="moneyDisplayer">
-      <h2>{{player.name}}</h2>
-      <h3><span class="money">M</span> {{player.money}}</h3>
-    </div>
+<div class="displayClass">
 
-    <div *ngIf="player.ifActive===true">
-      <div id="hideButtons">
-        <button (click)="buyingProperty()">Buy Property</button>
-        <button (click)="endTurn()">End Turn</button>
+
+<div *ngFor="let player of players" class="playerDisplay">
+  <div class="moneyDisplayer">
+    <h2>{{player.name}}</h2>
+    <h3><span class="money">M</span> {{player.money}}</h3>
+  </div>
+
+  <div *ngIf="player.ifActive===true">
+    <div id="hideButtons">
+      <button (click)="buyingProperty()">Buy Property</button>
+      <button (click)="endTurn()">End Turn</button>
+    </div>
+  </div>
+</div><br>
+
+<div class="diceArea">
+  <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button><br>
+  <div class="rolldisplay">
+    <h3><strong>{{roll1}}</strong></h3>
+    <h3><strong>{{roll2}}</strong></h3>
+  </div>
+</div>
+
+  <div class="cards">
+
+  <div id="communityContainer">
+    <div id="randomCard">
+      <div id="communityCardContent">
+        <h1>Community Chest</h1>
+        {{randomCommunityCard}}
+      </div>
+      <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
+    </div>
+  </div>
+
+
+    <div id="chanceContainer">
+      <div id="randomCard">
+        <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
+        <div id="chanceCardContent">
+          <h1>Chance Card</h1>
+          {{randomChanceCard}}
+        </div>
       </div>
     </div>
-  </div><br>
 
-  <div class="diceArea">
-    <button (click)="playerDiceRoll()" id="hideRoll">Roll Dice</button><br>
-    <div class="rolldisplay">
-      <h3><strong>{{roll1}}</strong></h3>
-      <h3><strong>{{roll2}}</strong></h3>
-    </div>
   </div>
-
-
-<div id="communityContainer">
-  <div id="randomCard">
-    <div id="communityCardContent">
-      <h1>Community Chest</h1>
-      {{randomCommunityCard}}
-    </div>
-    <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
-  </div>
-  <!-- <div *ngIf="randomCommunityCard != null" id="randomCard">
-    <div id="communityCardContent">
-      <h1>Community Chest</h1>
-      <p>{{randomCommunityCard}}</p>
-    </div>
-    <img src="./../assets/images/monopoly-community.jpg" alt="monopoly community chest">
-  </div> -->
-<!-- </div> -->
-
-<div id="chanceContainer">
-  <div id="randomCard">
-    <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
-    <div id="chanceCardContent">
-      <h1>Chance Card</h1>
-      {{randomChanceCard}}
-    </div>
-  </div>
-  <!-- <div *ngIf="randomChanceCard != null" id="randomCard">
-    <img src="./../assets/images/monopoly-chance.gif" alt="monopoly chance chest">
-    <div id="chanceCardContent">
-      <h1>Chance Card</h1>
-      <p>{{randomChanceCard}}</p>
-    </div>
-  </div> -->
 </div>
-</div>
-
-<button (click)="consolelogging()">click</button>
