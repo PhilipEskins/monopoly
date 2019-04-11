@@ -1,4 +1,4 @@
-/* .money {
+.money {
   text-decoration: line-through;
   font-weight: bold;
   font-size: 1em;
@@ -64,15 +64,15 @@
   border: 3px solid black;
 }
 
-/* .backgroundTras {
+.backgroundTras {
   margin: 10px;
   width: 23%;
   opacity: 50%;
   display: block;
   color: black;
-} */
+}
 
 #hideRoll:hover {
   background-color: #f7f5f3;
   transform: scale(1.15);
-} */
+}
