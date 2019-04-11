@@ -1,0 +1,82 @@
+.money {
+  text-decoration: line-through;
+  font-weight: bold;
+  font-size: 1em;
+}
+/.moneyDisplayer {
+  display: flex;
+  flex-direction: row;
+}
+
+.hideRolll{
+  display: none;
+}
+
+.playerDisplay {
+  border-top: 1px solid black;
+  border-bottom: 3px solid black;
+  padding: 2vw;
+  background-color: lightgrey;
+}
+
+.playerDisplay h2 {
+  text-decoration: underline;
+}
+
+.diceArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+
+.diceArea h3 {
+  border: 3px solid black;
+  border-radius: 3px;
+  width: 4vw;
+  height: 4vw;
+  font-size: 1.5em;
+  background-color: white;
+}
+
+
+#hideButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.rolldisplay {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: flex-end;
+  font-size: 1.25em;
+}
+.backgroundColor{
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+#hideRoll {
+  width: 60%;
+  align-self: center;
+  font-size: 1.75em;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+/* .backgroundTras {
+  margin: 10px;
+  width: 23%;
+  opacity: 50%;
+  display: block;
+  color: black;
+} */
+
+#hideRoll:hover {
+  background-color: #f7f5f3;
+  transform: scale(1.15);
+}
