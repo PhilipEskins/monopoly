@@ -33,5 +33,6 @@ export class CommunityCardsComponent implements OnInit {
     } else {
       this.communityCards.splice(card, 1);
     }
+    return this.randomCommunityCard;
   }
 }
