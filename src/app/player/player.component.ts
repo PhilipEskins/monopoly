@@ -60,6 +60,8 @@ export class PlayerComponent implements OnInit {
   }
 
   endTurn() {
+    this.randomChanceCard = null;
+    this.randomCommunityCard = null;
     const hide = document.getElementById("hideRoll");
     hide.classList.remove("hideRolll") ;
     this.ifActive = false;
@@ -75,6 +77,8 @@ export class PlayerComponent implements OnInit {
       this.setValues(this.players[this.position]);
       this.newInfo();
     }
+
+
   }
 
   newInfo() {
@@ -227,6 +231,5 @@ export class PlayerComponent implements OnInit {
         this.chanceCards.splice(card, 1);
       }
     }
-
   }
 }
